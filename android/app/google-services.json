@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "205814355062",
+    "firebase_url": "https://qadri-travels-7fdd7.firebaseio.com",
+    "project_id": "qadri-travels-7fdd7",
+    "storage_bucket": "qadri-travels-7fdd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205814355062:android:63a8121503858f1ae9bb57",
+        "android_client_info": {
+          "package_name": "ajn.qadritravels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205814355062-9e551qv3is58cjfmuh3e1fehl1cef3v8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ajn.qadritravels",
+            "certificate_hash": "9998d1937dd47457d8c001bcb7b867ca69944bbc"
+          }
+        },
+        {
+          "client_id": "205814355062-407gehgveubqfogr7889aqnc4ip338vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEc4j0-NaKz53HqHkfwNJm-_PJBtDJYuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205814355062-407gehgveubqfogr7889aqnc4ip338vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205814355062:android:fd97f719ca84144fe9bb57",
+        "android_client_info": {
+          "package_name": "ajn.qadritravels_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205814355062-pkbqqvlrai0et256c78ssgit0fo68cck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ajn.qadritravels_admin",
+            "certificate_hash": "9998d1937dd47457d8c001bcb7b867ca69944bbc"
+          }
+        },
+        {
+          "client_id": "205814355062-407gehgveubqfogr7889aqnc4ip338vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEc4j0-NaKz53HqHkfwNJm-_PJBtDJYuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205814355062-407gehgveubqfogr7889aqnc4ip338vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
