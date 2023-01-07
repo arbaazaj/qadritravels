@@ -198,7 +198,19 @@ class _SeatSelectionState extends State<SeatSelection> {
               ),
             ),
           ),
-          Positioned(bottom: 0, child: Container())
+          Positioned(bottom: 0, child: Container()),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateColor.resolveWith((states) => radicalRed)
+              ),
+              onPressed: () {},
+              child: Text('Proceed'),
+            ),
+          )
         ],
       ),
     );
