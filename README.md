@@ -1,16 +1,15 @@
 # qadritravels
 
-A Bus Ticket Booking app
+> A Bus Ticket Booking app
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt ](screenshots/_splashscreen_login.png)
+![alt ](screenshots/main_screen.jpg)
+![alt ](screenshots/search.jpg)
+![alt ](screenshots/acoounts_page.jpg)
+![alt ](screenshots/buses_found.png)
+![alt ](screenshots/seat_selection.png)
+![alt ](screenshots/seat_selected.png)
+![alt ](screenshots/confirm_booking.png)
+![alt ](screenshots/booking_confirmed.png)
