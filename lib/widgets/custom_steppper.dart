@@ -4,11 +4,13 @@ import 'package:qadritravels/themes/colors.dart';
 import 'package:qadritravels/widgets/custom_dotted_line.dart';
 
 class CustomStepper extends StatelessWidget {
+  const CustomStepper({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Icon(
+        const Icon(
           FontAwesomeIcons.circleDot,
           color: radicalRed,
         ),
@@ -21,7 +23,7 @@ class CustomStepper extends StatelessWidget {
             strokeWidth: 2,
           ),
         ),
-        Icon(
+        const Icon(
           FontAwesomeIcons.circleDot,
           color: Colors.deepPurple,
         ),

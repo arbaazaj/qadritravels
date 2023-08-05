@@ -26,7 +26,7 @@ class DepartureArrivalWidget extends StatelessWidget {
                     text: '09:00 AM',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2
+                        .bodyMedium
                     !.copyWith(
                         color: Colors.grey.shade300)),
               ]),
@@ -49,7 +49,7 @@ class DepartureArrivalWidget extends StatelessWidget {
                   text: '11:20 AM',
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
+                      .bodyMedium
                   !.copyWith(
                       color: Colors.grey.shade300),
                 ),

@@ -79,10 +79,10 @@ class Body extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _BodyState createState() => _BodyState();
+  BodyState createState() => BodyState();
 }
 
-class _BodyState extends State<Body> {
+class BodyState extends State<Body> {
   TextEditingController fromController = TextEditingController();
   TextEditingController destinationController = TextEditingController();
 
@@ -105,10 +105,10 @@ class _BodyState extends State<Body> {
               padding: EdgeInsets.only(left: 16.0),
               child: Text('Recent Trips'),
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: const <Widget>[
+                children: <Widget>[
                   CustomRecentTripCard(
                     dayOfTheMonth: 'June',
                     dateOfTheMonth: 23,

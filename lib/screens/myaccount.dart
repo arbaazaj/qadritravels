@@ -1,12 +1,15 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qadritravels/themes/colors.dart';
 
 class MyAccount extends StatefulWidget {
+  const MyAccount({super.key});
+
   @override
-  _MyAccountState createState() => _MyAccountState();
+  MyAccountState createState() => MyAccountState();
 }
 
-class _MyAccountState extends State<MyAccount> {
+class MyAccountState extends State<MyAccount> {
   //final GoogleSignIn _googleSignIn = GoogleSignIn();
   //final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -41,7 +44,7 @@ class _MyAccountState extends State<MyAccount> {
         elevation: 0.0,
         backgroundColor: radicalRed,
         leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context)),
       ),
       body: Container(
@@ -50,7 +53,7 @@ class _MyAccountState extends State<MyAccount> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(bottom: 32.0),
+              padding: const EdgeInsets.only(bottom: 32.0),
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(
@@ -72,7 +75,7 @@ class _MyAccountState extends State<MyAccount> {
             Padding(
               padding: const EdgeInsets.only(bottom: 16.0),
               child: ElevatedButton(
-                child: Text('Sign In'),
+                child: const Text('Sign In'),
                 onPressed: () {
                   //_handleSignIn();
                 },
@@ -80,7 +83,7 @@ class _MyAccountState extends State<MyAccount> {
             ),
             Flexible(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Colors.black26,
@@ -99,7 +102,7 @@ class _MyAccountState extends State<MyAccount> {
                         children: <Widget>[
                           ListTile(
                             title: Text(item,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 20.0,
                                     color: smoky,
                                     fontWeight: FontWeight.bold)),
@@ -114,10 +117,12 @@ class _MyAccountState extends State<MyAccount> {
                                 // // final String uid = user.uid;
                                 // print(uid + ' has successfully signed out.');
                               }
-                              print(item);
+                              if (kDebugMode) {
+                                print(item);
+                              }
                             },
                           ),
-                          Divider(),
+                          const Divider(),
                         ],
                       );
                     }).toList(),
@@ -131,7 +136,7 @@ class _MyAccountState extends State<MyAccount> {
     );
   }
 
-  // void _signOut() async {
-  //   await _auth.signOut();
-  // }
+// void _signOut() async {
+//   await _auth.signOut();
+// }
 }

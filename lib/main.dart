@@ -27,7 +27,7 @@ class QadriTravels extends StatelessWidget {
         GetPage(name: '/home', page: () => const MyHomePage()),
         GetPage(name: '/confirmBooking', page: () => const ConfirmBooking(), transition: Transition.rightToLeft),
         GetPage(name: '/seatSelection', page: () => const SeatSelection()),
-        GetPage(name: '/myaccount', page: () => MyAccount()),
+        GetPage(name: '/myaccount', page: () => const MyAccount()),
         GetPage(name: '/searchBuses', page: () => const SearchBuses()),
         GetPage(name: '/startScreen', page: () => const StartScreen()),
         GetPage(name: '/notificationPage', page: () => const NotificationPage()),

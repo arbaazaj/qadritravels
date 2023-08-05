@@ -192,23 +192,23 @@ class SeatSelectionState extends State<SeatSelection> {
                                 'Select Seats',
                                 style: Theme.of(context)
                                     .textTheme
-                                    .subtitle1
+                                    .titleMedium
                                     !.copyWith(
                                         fontSize: Theme.of(context)
                                                 .textTheme
-                                                .subtitle1
+                                                .titleMedium
                                                 !.fontSize! * scale,
                                         color:
                                             Palette.getContrastColor(context),
                                         fontWeight: FontWeight.w700),
                               ),
                             ),
-                            Container(
+                            const SizedBox(
                               height: 40,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
-                                children: const <Widget>[
+                                children: <Widget>[
                                   Icon(
                                     FontAwesomeIcons.couch,
                                     color: mystic,
@@ -247,12 +247,18 @@ class SeatSelectionState extends State<SeatSelection> {
                   backgroundColor:
                       MaterialStateColor.resolveWith((states) => radicalRed)),
               onPressed: () {
-                print(seatSelected.length);
+                if (kDebugMode) {
+                  print(seatSelected.length);
+                }
                 if (seatSelected.length < 1) {
-                  print('Seat: ${seatSelected[1]['label']}');
+                  if (kDebugMode) {
+                    print('Seat: ${seatSelected[1]['label']}');
+                  }
                 } else {
                   seatSelected.forEach((seat) {
-                    print('Seats: ${seat['label']}');
+                    if (kDebugMode) {
+                      print('Seats: ${seat['label']}');
+                    }
                   });
                 }
                 Get.toNamed('confirmBooking', arguments: [seatSelected, bus]);
@@ -281,7 +287,7 @@ class SeatSelectionState extends State<SeatSelection> {
   }
 
   buildSeatLayout(BuildContext context, BoxConstraints constraints) {
-    return Container(
+    return SizedBox(
       height: currentSize * numOfRows + 24,
       child: GridView.count(
         physics: const NeverScrollableScrollPhysics(),

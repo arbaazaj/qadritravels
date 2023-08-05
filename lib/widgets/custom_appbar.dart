@@ -40,7 +40,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           GestureDetector(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => MyAccount()));
+                  MaterialPageRoute(builder: (context) => const MyAccount()));
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 0, right: 30, bottom: 16),

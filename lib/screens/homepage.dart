@@ -49,13 +49,13 @@ class MainBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const <Widget>[
+          children: <Widget>[
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text('Recent Trips'),
@@ -63,7 +63,7 @@ class MainBody extends StatelessWidget {
             CustomRecentTripCard(),
           ],
         ),
-        const Flexible(
+        Flexible(
           child: Align(
             alignment: Alignment.bottomCenter,
             child: CustomBottomSearch(),

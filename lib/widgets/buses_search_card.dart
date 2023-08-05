@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class BusesSearchCard extends StatelessWidget {
+  const BusesSearchCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      decoration: BoxDecoration(boxShadow: <BoxShadow>[
+      decoration: const BoxDecoration(boxShadow: <BoxShadow>[
         BoxShadow(
             offset: Offset(0, -5),
             blurRadius: 4,
@@ -14,7 +16,7 @@ class BusesSearchCard extends StatelessWidget {
       ]),
       child: Card(
         margin: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(topRight: Radius.circular(32.0)),
         ),
         child: Column(
@@ -26,7 +28,7 @@ class BusesSearchCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'AC Buses',
                     style: TextStyle(
                       color: Color(0xFF455F82),
@@ -34,7 +36,7 @@ class BusesSearchCard extends StatelessWidget {
                       fontSize: 18,
                     ),
                   ),
-                  IconButton(icon: Icon(Icons.more_horiz), onPressed: () {})
+                  IconButton(icon: const Icon(Icons.more_horiz), onPressed: () {})
                 ],
               ),
             ),
@@ -46,15 +48,15 @@ class BusesSearchCard extends StatelessWidget {
 }
 
 class BusCard extends StatelessWidget {
+  const BusCard({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Card(
-        child: Column(
-          children: <Widget>[
+    return const Card(
+      child: Column(
+        children: <Widget>[
 
-          ],
-        ),
+        ],
       ),
     );
   }

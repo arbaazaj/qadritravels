@@ -13,7 +13,7 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Positioned.fill(child: AnimatedBackground()),
+        const Positioned.fill(child: AnimatedBackground()),
         onBottom(AnimatedWave(
           color: Colors.white.withOpacity(0.3),
           height: 180,

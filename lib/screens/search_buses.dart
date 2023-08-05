@@ -93,12 +93,12 @@ class BusCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     buses[index].routeName,
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.bold, color: darkAccent),
                   ),
                   Text(
                     '₹${buses[index].ticketPrice}',
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.bold, color: radicalRed),
                   ),
                 ],
@@ -107,8 +107,8 @@ class BusCard extends StatelessWidget {
                 buses[index].busType,
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle2
-                    !.copyWith(color: Colors.grey[500]),
+                    .titleSmall!
+                    .copyWith(color: Colors.grey[500]),
               ),
               const Flexible(child: Divider()),
               BusRouteWidget(buses: buses, index: index),
@@ -138,14 +138,14 @@ class BusRouteWidget extends StatelessWidget {
         RichText(
           text: TextSpan(
               text: 'Departure\n',
-              style: Theme.of(context).textTheme.overline,
+              style: Theme.of(context).textTheme.labelSmall,
               children: [
                 TextSpan(
                     text: '09:00 AM',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2
-                        !.copyWith(color: kobi)),
+                        .bodyMedium!
+                        .copyWith(color: kobi)),
               ]),
         ),
         const Icon(
@@ -155,14 +155,14 @@ class BusRouteWidget extends StatelessWidget {
         RichText(
           text: TextSpan(
               text: 'Arrival\n',
-              style: Theme.of(context).textTheme.overline,
+              style: Theme.of(context).textTheme.labelSmall,
               children: [
                 TextSpan(
                   text: '11:20 AM',
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2
-                      !.copyWith(color: kobi),
+                      .bodyMedium!
+                      .copyWith(color: kobi),
                 ),
               ]),
         ),
