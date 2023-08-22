@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:qadritravels/themes/colors.dart';
-import 'package:qadritravels/utils/bus.dart';
+import 'package:qadritravels/models/bus.dart';
 import 'package:qadritravels/utils/seat_arrangement.dart';
 
 class SeatSelection extends StatefulWidget {
@@ -301,7 +301,9 @@ class SeatSelectionState extends State<SeatSelection> {
               if (kDebugMode) {
                 print('Tapped $item + $isSelected');
               }
-              seatSelect(item);
+              if (type != 2) {
+                seatSelect(item);
+              }
             },
             child: Container(
               width: seatSize,
@@ -326,7 +328,7 @@ class SeatSelectionState extends State<SeatSelection> {
                   : type == 1
                       ? Text(
                           label,
-                          style: Theme.of(context).textTheme.caption!.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               fontSize: 9 * scale,
                               color: !isSelected
                                   ? Palette.getContrastColor(context)

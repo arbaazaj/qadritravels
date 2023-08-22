@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:qadritravels/themes/colors.dart';
-import 'package:qadritravels/utils/bus.dart';
+import 'package:qadritravels/models/bus.dart';
 
 class SearchBuses extends StatefulWidget {
   final String? from;

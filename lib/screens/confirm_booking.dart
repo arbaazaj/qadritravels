@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:qadritravels/models/bus.dart';
 import 'package:qadritravels/themes/colors.dart';
-import 'package:qadritravels/utils/bus.dart';
 import 'package:qadritravels/widgets/departure_arrival_widget.dart';
 
 class ConfirmBooking extends StatelessWidget {
@@ -10,7 +10,7 @@ class ConfirmBooking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var seats = Get.arguments;
-    List<Map> seat = seats[0];
+    List<Map> fetchedSeats = seats[0];
     Bus bus = seats[1];
 
     return Scaffold(
@@ -62,29 +62,56 @@ class ConfirmBooking extends StatelessWidget {
                           const DepartureArrivalWidget(),
                           const Divider(color: backgroundColor),
                           Text(
-                            'Total seats: ${seat.length} | ₹${bus.ticketPrice}/ticket',
+                            'Total seats: ${fetchedSeats.length} | ₹${bus.ticketPrice}/ticket',
                             style: const TextStyle(
                                 color: mystic,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            'Total Price: ₹${bus.ticketPrice * seat.length}',
+                            'Total Price: ₹${bus.ticketPrice * fetchedSeats.length}',
                             style: const TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
                                 color: mystic),
                           ),
+                          const Divider(color: backgroundColor),
                           Flexible(
-                            child: ListView.builder(
-                                itemCount: seats.length,
-                                itemBuilder: (context, index) {
-                                  return Column(
-                                    children: [
-                                      Container(),
-                                    ],
-                                  );
-                                }),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  fetchedSeats.length < 2
+                                      ? 'Seat No: '
+                                      : 'Seats: ',
+                                  style: const TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: mystic,
+                                  ),
+                                ),
+                                Flexible(
+                                  child: ListView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: fetchedSeats.length,
+                                    itemBuilder: (context, index) {
+                                      var seatsSelected =
+                                          fetchedSeats[index]['label'];
+                                      return Text(
+                                        index == fetchedSeats.length - 1
+                                            ? '$seatsSelected '
+                                            : '$seatsSelected, ',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.amber.shade200,
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -113,7 +140,8 @@ class ConfirmBooking extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.bolt, color: Colors.amberAccent.shade100),
-                      const Text('Instant Book', style: TextStyle(fontSize: 20.0)),
+                      const Text('Instant Book',
+                          style: TextStyle(fontSize: 20.0)),
                     ],
                   ),
                 ),
